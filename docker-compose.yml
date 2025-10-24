@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      APP_ENV: development
+    # Geliştirme için canlı kod (dosya kaydedince anında yansır)
+    volumes:
+      - .:/var/www/html:delegated
+      # SQLite DB kalıcılığı için:
+      - sqlite_data:/var/www/html/storage/db
+volumes:
+  sqlite_data:

@@ -1,0 +1,16 @@
+# sistem
+.DS_Store
+Thumbs.db
+
+# php cache / log
+storage/*.log
+storage/framework/*
+vendor/
+node_modules/
+
+# ortam dosyaları
+.env
+
+# docker geçici dosyaları
+db_data/
+sqlite_data/
